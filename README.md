@@ -26,22 +26,22 @@ dotnet build AdPerformance.sln -c Release
 # Run
 dotnet run --project src/AdPerformance.CLI -c Release -- \
   --input ./data/ad_data.csv \
-  --output-dir ./output \
+  --output-dir ./results \
   --top-n 10 \
   --verbose
 ```
 
 Outputs:
 
-- `./output/top10_ctr.csv` — top N campaigns by highest CTR
-- `./output/top10_cpa.csv` — top N campaigns by lowest CPA (excludes campaigns with zero conversions)
+- `./results/top10_ctr.csv` — top N campaigns by highest CTR
+- `./results/top10_cpa.csv` — top N campaigns by lowest CPA (excludes campaigns with zero conversions)
 
 ## CLI reference
 
 | Flag                        | Default               | Description                                            |
 |-----------------------------|-----------------------|--------------------------------------------------------|
 | `-i`, `--input <path>`      | (required)            | Input CSV file.                                        |
-| `-o`, `--output-dir <dir>`  | `./output`            | Directory to write result CSVs.                        |
+| `-o`, `--output-dir <dir>`  | `./results`          | Directory to write result CSVs.                        |
 | `-n`, `--top-n <int>`       | `10`                  | Ranking size for each output file.                     |
 | `-w`, `--workers <int>`     | `0` (auto, N-1 cores) | `1` forces single-threaded path. `>1` uses parallel aggregator. |
 | `-v`, `--verbose`           | off                   | Log progress every 1 M rows.                           |

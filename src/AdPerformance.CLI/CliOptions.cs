@@ -8,7 +8,7 @@ public sealed record CliOptions(
     bool Verbose,
     int Workers)
 {
-    public const string DefaultOutputDirectory = "./output";
+    public const string DefaultOutputDirectory = "./results";
     public const int DefaultTopN = 10;
     /// <summary>0 means "auto: Environment.ProcessorCount - 1".</summary>
     public const int DefaultWorkers = 0;
@@ -104,7 +104,7 @@ public sealed record CliOptions(
 
         Options:
           -i, --input <path>        Input CSV file (required).
-          -o, --output-dir <dir>    Directory for result CSVs. Default: ./output
+          -o, --output-dir <dir>    Directory for result CSVs. Default: ./results
           -n, --top-n <int>         Ranking size for each output file. Default: 10
           -w, --workers <int>       Parallel worker count. Default: 0 (auto: N-1 cores).
                                     1 disables parallelism and uses the single-threaded
