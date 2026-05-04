@@ -1,0 +1,133 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1777918343487,
+  "projectRoot": "/Volumes/Code/interview/fv-sec-001-software-engineer-challenge",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "scripts",
+      "src",
+      "tests"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "benchmarks": {
+      "path": "benchmarks",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1777918343476,
+      "keyFiles": []
+    },
+    "data": {
+      "path": "data",
+      "purpose": "Data files",
+      "fileCount": 3,
+      "lastAccessed": 1777918343477,
+      "keyFiles": [
+        "ad_data.csv",
+        "ad_data_x10.csv"
+      ]
+    },
+    "output": {
+      "path": "output",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1777918343477,
+      "keyFiles": [
+        "top10_cpa.csv",
+        "top10_ctr.csv"
+      ]
+    },
+    "publish": {
+      "path": "publish",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1777918343479,
+      "keyFiles": [
+        "AdPerformance",
+        "AdPerformance.Core.pdb",
+        "AdPerformance.Infrastructure.pdb"
+      ]
+    },
+    "results": {
+      "path": "results",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1777918343479,
+      "keyFiles": [
+        "top10_cpa.csv",
+        "top10_ctr.csv"
+      ]
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 2,
+      "lastAccessed": 1777918343480,
+      "keyFiles": [
+        "make_large.py",
+        "sweep_workers.sh"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1777918343480,
+      "keyFiles": []
+    },
+    "tests": {
+      "path": "tests",
+      "purpose": "Test files",
+      "fileCount": 0,
+      "lastAccessed": 1777918343480,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "benchmarks/AdPerformance.Benchmarks/AdPerformance.Benchmarks.csproj",
+      "accessCount": 1,
+      "lastAccessed": 1777918348249,
+      "type": "file"
+    },
+    {
+      "path": "benchmarks/AdPerformance.Benchmarks/AggregationBenchmarks.cs",
+      "accessCount": 1,
+      "lastAccessed": 1777918351149,
+      "type": "file"
+    },
+    {
+      "path": "Dockerfile",
+      "accessCount": 1,
+      "lastAccessed": 1777918364628,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
