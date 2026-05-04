@@ -1,0 +1,25 @@
+version: v1.25.0
+# Ignore rules for Snyk Code findings accepted as false positives or
+# working-as-intended for this developer-run CLI tool.
+
+ignore:
+  csharp/PT:
+    - '*':
+        reason: >-
+          Path Traversal (CWE-23): this is a local, developer-run CLI whose
+          entire purpose is to let the user specify --input and --output-dir.
+          Both paths flow through PathSanitizer.NormalizePath which rejects
+          control characters, invalid path chars, and canonicalises with
+          Path.GetFullPath. There is no multi-tenant/server context to
+          protect against. Accepted by owner.
+        expires: 2099-12-31T00:00:00.000Z
+  csharp/LogForging:
+    - '*':
+        reason: >-
+          Log Forging (CWE-117): user-provided paths are passed through
+          PathSanitizer.ForLog which strips CR/LF/tab and all control chars
+          before interpolation into log records. Taint analyzer does not
+          recognise custom sanitiser. Accepted by owner.
+        expires: 2099-12-31T00:00:00.000Z
+
+patch: {}

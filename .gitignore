@@ -1,0 +1,28 @@
+# Build outputs
+bin/
+obj/
+publish/
+out/
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data / artifacts
+data/ad_data.csv
+data/ad_data_x*.csv
+output/*.csv
+BenchmarkDotNet.Artifacts/
+
+# Test results
+TestResults/
+*.trx
+coverage.xml
+*.coverage
