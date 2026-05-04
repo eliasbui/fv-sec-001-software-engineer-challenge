@@ -19,7 +19,7 @@ Thumbs.db
 data/ad_data.csv
 data/ad_data_x*.csv
 results/*.csv
-BenchmarkDotNet.Artifacts/
+# BenchmarkDotNet.Artifacts/
 
 # Test results
 TestResults/
