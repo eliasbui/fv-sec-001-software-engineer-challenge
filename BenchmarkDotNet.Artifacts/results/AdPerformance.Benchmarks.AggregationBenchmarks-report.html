@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>AdPerformance.Benchmarks.AggregationBenchmarks-20260505-011332</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.15.8, macOS Tahoe 26.4.1 (25E253) [Darwin 25.4.0]
+Apple M4, 1 CPU, 10 logical and 10 physical cores
+.NET SDK 10.0.100
+  [Host]     : .NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a
+  Job-FEWCWF : .NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a
+</code></pre>
+<pre><code>InvocationCount=1  IterationCount=3  UnrollFactor=1  
+WarmupCount=1  
+</code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>RowCount</th><th>Workers</th><th>Mean        </th><th>Error     </th><th>StdDev   </th><th>Median      </th><th>Ratio </th><th>RatioSD</th><th>Gen0 </th><th>Gen1</th><th>Allocated</th><th>Alloc Ratio</th>
+</tr>
+</thead><tbody><tr><td>Sequential</td><td>1000000</td><td>1</td><td>328,003,819.0 ns</td><td>207,611,003.0 ns</td><td>11,379,859.7 ns</td><td>323,680,208.0 ns</td><td>1.00</td><td>0.04</td><td>35000.0000</td><td>-</td><td>294884560 B</td><td>1.000</td>
+</tr><tr><td>MemoryMapped</td><td>1000000</td><td>1</td><td>168,167,235.7 ns</td><td>156,450,255.7 ns</td><td>8,575,566.5 ns</td><td>163,297,916.0 ns</td><td>0.51</td><td>0.03</td><td>-</td><td>-</td><td>19880 B</td><td>0.000</td>
+</tr><tr><td>Sequential</td><td>1000000</td><td>4</td><td>223.0 ns</td><td>2,446.1 ns</td><td>134.1 ns</td><td>167.0 ns</td><td>1.23</td><td>0.86</td><td>-</td><td>-</td><td>-</td><td>NA</td>
+</tr><tr><td>MemoryMapped</td><td>1000000</td><td>4</td><td>48,599,861.2 ns</td><td>122,956,494.7 ns</td><td>6,739,660.4 ns</td><td>44,933,125.5 ns</td><td>268,661.76</td><td>117,541.16</td><td>-</td><td>-</td><td>61952 B</td><td>NA</td>
+</tr><tr><td>Sequential</td><td>1000000</td><td>8</td><td>318.7 ns</td><td>2,873.6 ns</td><td>157.5 ns</td><td>249.0 ns</td><td>1.15</td><td>0.65</td><td>-</td><td>-</td><td>-</td><td>NA</td>
+</tr><tr><td>MemoryMapped</td><td>1000000</td><td>8</td><td>76,301,237.0 ns</td><td>122,503,589.4 ns</td><td>6,714,835.1 ns</td><td>79,795,751.0 ns</td><td>275,390.61</td><td>98,032.05</td><td>-</td><td>-</td><td>118048 B</td><td>NA</td>
+</tr><tr><td>Sequential</td><td>10000000</td><td>1</td><td>3,237,297,972.0 ns</td><td>422,204,124.5 ns</td><td>23,142,432.8 ns</td><td>3,250,367,625.0 ns</td><td>1.00</td><td>0.01</td><td>352000.0000</td><td>1000.0000</td><td>2946833240 B</td><td>1.000</td>
+</tr><tr><td>MemoryMapped</td><td>10000000</td><td>1</td><td>971,511,569.0 ns</td><td>175,443,745.4 ns</td><td>9,616,663.7 ns</td><td>966,589,792.0 ns</td><td>0.30</td><td>0.00</td><td>-</td><td>-</td><td>19880 B</td><td>0.000</td>
+</tr><tr><td>Sequential</td><td>10000000</td><td>4</td><td>320.0 ns</td><td>4,188.6 ns</td><td>229.6 ns</td><td>209.0 ns</td><td>1.33</td><td>1.09</td><td>-</td><td>-</td><td>-</td><td>NA</td>
+</tr><tr><td>MemoryMapped</td><td>10000000</td><td>4</td><td>258,287,000.3 ns</td><td>159,152,221.6 ns</td><td>8,723,670.3 ns</td><td>255,473,458.0 ns</td><td>1,074,907.99</td><td>494,382.75</td><td>-</td><td>-</td><td>61952 B</td><td>NA</td>
+</tr><tr><td>Sequential</td><td>10000000</td><td>8</td><td>319.3 ns</td><td>1,918.7 ns</td><td>105.2 ns</td><td>333.0 ns</td><td>1.09</td><td>0.47</td><td>-</td><td>-</td><td>-</td><td>NA</td>
+</tr><tr><td>MemoryMapped</td><td>10000000</td><td>8</td><td>203,823,111.7 ns</td><td>267,402,591.9 ns</td><td>14,657,238.4 ns</td><td>209,665,709.0 ns</td><td>693,594.89</td><td>225,830.83</td><td>-</td><td>-</td><td>118048 B</td><td>NA</td>
+</tr></tbody></table>
+</body>
+</html>

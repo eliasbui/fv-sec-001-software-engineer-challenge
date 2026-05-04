@@ -1,0 +1,1081 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 12 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/" /p:OutDir="/Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/bin/Release/net10.0/" /p:OutputPath="/Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/bin/Release/net10.0/" /p:PublishDir="/Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/publish/" in /Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1
+// command took 0.84 sec and exited with 0
+// start dotnet  build -c Release --no-restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/" /p:OutDir="/Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/bin/Release/net10.0/" /p:OutputPath="/Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/bin/Release/net10.0/" /p:PublishDir="/Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/publish/" --output "/Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/bin/Release/net10.0/" in /Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1
+// command took 5.63 sec and exited with 0
+// ***** Done, took 00:00:06 (6.5 sec)   *****
+// Found 12 benchmarks:
+//   AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=1]
+//   AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=1]
+//   AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=4]
+//   AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=4]
+//   AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=8]
+//   AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=8]
+//   AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=1]
+//   AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=1]
+//   AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=4]
+//   AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=4]
+//   AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=8]
+//   AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=8]
+
+// **************************
+// Benchmark: AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=1]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AdPerformance.Benchmarks-Job-FEWCWF-1.dll --anonymousPipes 135 136 --benchmarkName "AdPerformance.Benchmarks.AggregationBenchmarks.Sequential(RowCount: 1000000, Workers: 1)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 0 in /Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 71083.00 ns, 71.0830 us/op
+WorkloadJitting  1: 1 op, 522342834.00 ns, 522.3428 ms/op
+
+OverheadWarmup   1: 1 op, 500.00 ns, 500.0000 ns/op
+OverheadWarmup   2: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadWarmup   3: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadWarmup   4: 1 op, 167.00 ns, 167.0000 ns/op
+OverheadWarmup   5: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadWarmup   6: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadWarmup   7: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadWarmup   8: 1 op, 42.00 ns, 42.0000 ns/op
+
+OverheadActual   1: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   2: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   3: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   4: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual   5: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   6: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   7: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   8: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   9: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  10: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  11: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  12: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual  13: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  14: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  15: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  16: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  17: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  18: 1 op, 84.00 ns, 84.0000 ns/op
+OverheadActual  19: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual  20: 1 op, 0.00 ns, 0.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 333664625.00 ns, 333.6646 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 340911875.00 ns, 340.9119 ms/op
+WorkloadActual   2: 1 op, 319419458.00 ns, 319.4195 ms/op
+WorkloadActual   3: 1 op, 323680250.00 ns, 323.6803 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 340911833.00 ns, 340.9118 ms/op
+WorkloadResult   2: 1 op, 319419416.00 ns, 319.4194 ms/op
+WorkloadResult   3: 1 op, 323680208.00 ns, 323.6802 ms/op
+// GC:  35 0 0 294884560 1
+// Threading:  587 0 1
+
+// AfterAll
+// Benchmark Process 83184 has exited with code 0.
+
+Mean = 328.004 ms, StdErr = 6.570 ms (2.00%), N = 3, StdDev = 11.380 ms
+Min = 319.419 ms, Q1 = 321.550 ms, Median = 323.680 ms, Q3 = 332.296 ms, Max = 340.912 ms
+IQR = 10.746 ms, LowerFence = 305.430 ms, UpperFence = 348.415 ms
+ConfidenceInterval = [120.393 ms; 535.615 ms] (CI 99.9%), Margin = 207.611 ms (63.30% of Mean)
+Skewness = 0.33, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 11 (91,7%) benchmark(s) to run. Estimated finish 2026-05-05 1:14 (0h 0m from now) **
+// **************************
+// Benchmark: AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=1]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AdPerformance.Benchmarks-Job-FEWCWF-1.dll --anonymousPipes 135 136 --benchmarkName "AdPerformance.Benchmarks.AggregationBenchmarks.MemoryMapped(RowCount: 1000000, Workers: 1)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 1 in /Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 65542.00 ns, 65.5420 us/op
+WorkloadJitting  1: 1 op, 165523250.00 ns, 165.5233 ms/op
+
+OverheadWarmup   1: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadWarmup   2: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadWarmup   3: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadWarmup   4: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadWarmup   5: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadWarmup   6: 1 op, 0.00 ns, 0.0000 ns/op
+
+OverheadActual   1: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   2: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   3: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual   4: 1 op, 84.00 ns, 84.0000 ns/op
+OverheadActual   5: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual   6: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadActual   7: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   8: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   9: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  10: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  11: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  12: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  13: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  14: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual  15: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  16: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  17: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  18: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  19: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  20: 1 op, 42.00 ns, 42.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 153991084.00 ns, 153.9911 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 163297958.00 ns, 163.2980 ms/op
+WorkloadActual   2: 1 op, 163134834.00 ns, 163.1348 ms/op
+WorkloadActual   3: 1 op, 178069041.00 ns, 178.0690 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 163297916.00 ns, 163.2979 ms/op
+WorkloadResult   2: 1 op, 163134792.00 ns, 163.1348 ms/op
+WorkloadResult   3: 1 op, 178068999.00 ns, 178.0690 ms/op
+// GC:  0 0 0 19880 1
+// Threading:  1 0 1
+
+// AfterAll
+// Benchmark Process 83193 has exited with code 0.
+
+Mean = 168.167 ms, StdErr = 4.951 ms (2.94%), N = 3, StdDev = 8.576 ms
+Min = 163.135 ms, Q1 = 163.216 ms, Median = 163.298 ms, Q3 = 170.683 ms, Max = 178.069 ms
+IQR = 7.467 ms, LowerFence = 152.016 ms, UpperFence = 181.884 ms
+ConfidenceInterval = [11.717 ms; 324.617 ms] (CI 99.9%), Margin = 156.450 ms (93.03% of Mean)
+Skewness = 0.38, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 10 (83,3%) benchmark(s) to run. Estimated finish 2026-05-05 1:13 (0h 0m from now) **
+// **************************
+// Benchmark: AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=4]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AdPerformance.Benchmarks-Job-FEWCWF-1.dll --anonymousPipes 135 136 --benchmarkName "AdPerformance.Benchmarks.AggregationBenchmarks.Sequential(RowCount: 1000000, Workers: 4)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 2 in /Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 65209.00 ns, 65.2090 us/op
+WorkloadJitting  1: 1 op, 618334.00 ns, 618.3340 us/op
+
+OverheadWarmup   1: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadWarmup   2: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadWarmup   3: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadWarmup   4: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadWarmup   5: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadWarmup   6: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadWarmup   7: 1 op, 42.00 ns, 42.0000 ns/op
+
+OverheadActual   1: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   2: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual   3: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   4: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   5: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   6: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   7: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   8: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   9: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  10: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  11: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  12: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  13: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  14: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  15: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  16: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  17: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  18: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  19: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  20: 1 op, 42.00 ns, 42.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 625.00 ns, 625.0000 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 417.00 ns, 417.0000 ns/op
+WorkloadActual   2: 1 op, 208.00 ns, 208.0000 ns/op
+WorkloadActual   3: 1 op, 167.00 ns, 167.0000 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 376.00 ns, 376.0000 ns/op
+WorkloadResult   2: 1 op, 167.00 ns, 167.0000 ns/op
+WorkloadResult   3: 1 op, 126.00 ns, 126.0000 ns/op
+// GC:  0 0 0 0 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 83194 has exited with code 0.
+
+Mean = 223.000 ns, StdErr = 77.410 ns (34.71%), N = 3, StdDev = 134.078 ns
+Min = 126.000 ns, Q1 = 146.500 ns, Median = 167.000 ns, Q3 = 271.500 ns, Max = 376.000 ns
+IQR = 125.000 ns, LowerFence = -41.000 ns, UpperFence = 459.000 ns
+ConfidenceInterval = [-2,223.088 ns; 2,669.088 ns] (CI 99.9%), Margin = 2,446.088 ns (1096.90% of Mean)
+Skewness = 0.34, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 9 (75,0%) benchmark(s) to run. Estimated finish 2026-05-05 1:13 (0h 0m from now) **
+// **************************
+// Benchmark: AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=4]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AdPerformance.Benchmarks-Job-FEWCWF-1.dll --anonymousPipes 135 136 --benchmarkName "AdPerformance.Benchmarks.AggregationBenchmarks.MemoryMapped(RowCount: 1000000, Workers: 4)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 3 in /Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 79666.00 ns, 79.6660 us/op
+WorkloadJitting  1: 1 op, 61802000.00 ns, 61.8020 ms/op
+
+OverheadWarmup   1: 1 op, 208.00 ns, 208.0000 ns/op
+OverheadWarmup   2: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadWarmup   3: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadWarmup   4: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadWarmup   5: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadWarmup   6: 1 op, 42.00 ns, 42.0000 ns/op
+
+OverheadActual   1: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   2: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   3: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual   4: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   5: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   6: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   7: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadActual   8: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   9: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  10: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  11: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  12: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual  13: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  14: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  15: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  16: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  17: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  18: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  19: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  20: 1 op, 42.00 ns, 42.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 48760250.00 ns, 48.7603 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 56377958.00 ns, 56.3780 ms/op
+WorkloadActual   2: 1 op, 44933167.00 ns, 44.9332 ms/op
+WorkloadActual   3: 1 op, 44488583.00 ns, 44.4886 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 56377916.50 ns, 56.3779 ms/op
+WorkloadResult   2: 1 op, 44933125.50 ns, 44.9331 ms/op
+WorkloadResult   3: 1 op, 44488541.50 ns, 44.4885 ms/op
+// GC:  0 0 0 61952 1
+// Threading:  4 0 1
+
+// AfterAll
+// Benchmark Process 83195 has exited with code 0.
+
+Mean = 48.600 ms, StdErr = 3.891 ms (8.01%), N = 3, StdDev = 6.740 ms
+Min = 44.489 ms, Q1 = 44.711 ms, Median = 44.933 ms, Q3 = 50.656 ms, Max = 56.378 ms
+IQR = 5.945 ms, LowerFence = 35.794 ms, UpperFence = 59.573 ms
+ConfidenceInterval = [-74.357 ms; 171.556 ms] (CI 99.9%), Margin = 122.956 ms (253.00% of Mean)
+Skewness = 0.38, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 8 (66,7%) benchmark(s) to run. Estimated finish 2026-05-05 1:13 (0h 0m from now) **
+// **************************
+// Benchmark: AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=8]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AdPerformance.Benchmarks-Job-FEWCWF-1.dll --anonymousPipes 135 136 --benchmarkName "AdPerformance.Benchmarks.AggregationBenchmarks.Sequential(RowCount: 1000000, Workers: 8)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 4 in /Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 66542.00 ns, 66.5420 us/op
+WorkloadJitting  1: 1 op, 612500.00 ns, 612.5000 us/op
+
+OverheadWarmup   1: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadWarmup   2: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadWarmup   3: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadWarmup   4: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadWarmup   5: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadWarmup   6: 1 op, 41.00 ns, 41.0000 ns/op
+
+OverheadActual   1: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   2: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   3: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   4: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual   5: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual   6: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   7: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   8: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   9: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  10: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  11: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual  12: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  13: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  14: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  15: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  16: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  17: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  18: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  19: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  20: 1 op, 0.00 ns, 0.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 667.00 ns, 667.0000 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 541.00 ns, 541.0000 ns/op
+WorkloadActual   2: 1 op, 291.00 ns, 291.0000 ns/op
+WorkloadActual   3: 1 op, 250.00 ns, 250.0000 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 499.00 ns, 499.0000 ns/op
+WorkloadResult   2: 1 op, 249.00 ns, 249.0000 ns/op
+WorkloadResult   3: 1 op, 208.00 ns, 208.0000 ns/op
+// GC:  0 0 0 0 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 83221 has exited with code 0.
+
+Mean = 318.667 ns, StdErr = 90.940 ns (28.54%), N = 3, StdDev = 157.513 ns
+Min = 208.000 ns, Q1 = 228.500 ns, Median = 249.000 ns, Q3 = 374.000 ns, Max = 499.000 ns
+IQR = 145.500 ns, LowerFence = 10.250 ns, UpperFence = 592.250 ns
+ConfidenceInterval = [-2,554.956 ns; 3,192.289 ns] (CI 99.9%), Margin = 2,873.623 ns (901.76% of Mean)
+Skewness = 0.36, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 7 (58,3%) benchmark(s) to run. Estimated finish 2026-05-05 1:13 (0h 0m from now) **
+// **************************
+// Benchmark: AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=8]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AdPerformance.Benchmarks-Job-FEWCWF-1.dll --anonymousPipes 135 136 --benchmarkName "AdPerformance.Benchmarks.AggregationBenchmarks.MemoryMapped(RowCount: 1000000, Workers: 8)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 5 in /Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 80833.00 ns, 80.8330 us/op
+WorkloadJitting  1: 1 op, 85783541.00 ns, 85.7835 ms/op
+
+OverheadWarmup   1: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadWarmup   2: 1 op, 84.00 ns, 84.0000 ns/op
+OverheadWarmup   3: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadWarmup   4: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadWarmup   5: 1 op, 42.00 ns, 42.0000 ns/op
+
+OverheadActual   1: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   2: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   3: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   4: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   5: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   6: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   7: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual   8: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   9: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  10: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  11: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  12: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  13: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  14: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  15: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  16: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  17: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  18: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  19: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  20: 1 op, 42.00 ns, 42.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 78911875.00 ns, 78.9119 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 79795792.00 ns, 79.7958 ms/op
+WorkloadActual   2: 1 op, 80548209.00 ns, 80.5482 ms/op
+WorkloadActual   3: 1 op, 68559833.00 ns, 68.5598 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 79795751.00 ns, 79.7958 ms/op
+WorkloadResult   2: 1 op, 80548168.00 ns, 80.5482 ms/op
+WorkloadResult   3: 1 op, 68559792.00 ns, 68.5598 ms/op
+// GC:  0 0 0 118048 1
+// Threading:  8 0 1
+
+// AfterAll
+// Benchmark Process 83222 has exited with code 0.
+
+Mean = 76.301 ms, StdErr = 3.877 ms (5.08%), N = 3, StdDev = 6.715 ms
+Min = 68.560 ms, Q1 = 74.178 ms, Median = 79.796 ms, Q3 = 80.172 ms, Max = 80.548 ms
+IQR = 5.994 ms, LowerFence = 65.186 ms, UpperFence = 89.163 ms
+ConfidenceInterval = [-46.202 ms; 198.805 ms] (CI 99.9%), Margin = 122.504 ms (160.55% of Mean)
+Skewness = -0.38, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 6 (50,0%) benchmark(s) to run. Estimated finish 2026-05-05 1:13 (0h 0m from now) **
+// **************************
+// Benchmark: AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=1]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AdPerformance.Benchmarks-Job-FEWCWF-1.dll --anonymousPipes 135 136 --benchmarkName "AdPerformance.Benchmarks.AggregationBenchmarks.Sequential(RowCount: 10000000, Workers: 1)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 6 in /Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 77583.00 ns, 77.5830 us/op
+WorkloadJitting  1: 1 op, 3524095750.00 ns, 3.5241 s/op
+
+OverheadWarmup   1: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadWarmup   2: 1 op, 208.00 ns, 208.0000 ns/op
+OverheadWarmup   3: 1 op, 84.00 ns, 84.0000 ns/op
+OverheadWarmup   4: 1 op, 84.00 ns, 84.0000 ns/op
+OverheadWarmup   5: 1 op, 0.00 ns, 0.0000 ns/op
+
+OverheadActual   1: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   2: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   3: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   4: 1 op, 84.00 ns, 84.0000 ns/op
+OverheadActual   5: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual   6: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual   7: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   8: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   9: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  10: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  11: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  12: 1 op, 84.00 ns, 84.0000 ns/op
+OverheadActual  13: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual  14: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  15: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  16: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  17: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  18: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  19: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  20: 1 op, 41.00 ns, 41.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 3162177791.00 ns, 3.1622 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 3250948834.00 ns, 3.2509 s/op
+WorkloadActual   2: 1 op, 3250367667.00 ns, 3.2504 s/op
+WorkloadActual   3: 1 op, 3210577541.00 ns, 3.2106 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 3250948792.00 ns, 3.2509 s/op
+WorkloadResult   2: 1 op, 3250367625.00 ns, 3.2504 s/op
+WorkloadResult   3: 1 op, 3210577499.00 ns, 3.2106 s/op
+// GC:  352 1 0 2946833240 1
+// Threading:  5861 0 1
+
+// AfterAll
+// Benchmark Process 83223 has exited with code 0.
+
+Mean = 3.237 s, StdErr = 0.013 s (0.41%), N = 3, StdDev = 0.023 s
+Min = 3.211 s, Q1 = 3.230 s, Median = 3.250 s, Q3 = 3.251 s, Max = 3.251 s
+IQR = 0.020 s, LowerFence = 3.200 s, UpperFence = 3.281 s
+ConfidenceInterval = [2.815 s; 3.660 s] (CI 99.9%), Margin = 0.422 s (13.04% of Mean)
+Skewness = -0.38, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 5 (41,7%) benchmark(s) to run. Estimated finish 2026-05-05 1:14 (0h 0m from now) **
+// **************************
+// Benchmark: AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=1]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AdPerformance.Benchmarks-Job-FEWCWF-1.dll --anonymousPipes 135 136 --benchmarkName "AdPerformance.Benchmarks.AggregationBenchmarks.MemoryMapped(RowCount: 10000000, Workers: 1)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 7 in /Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 82875.00 ns, 82.8750 us/op
+WorkloadJitting  1: 1 op, 1140601333.00 ns, 1.1406 s/op
+
+OverheadWarmup   1: 1 op, 250.00 ns, 250.0000 ns/op
+OverheadWarmup   2: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadWarmup   3: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadWarmup   4: 1 op, 166.00 ns, 166.0000 ns/op
+OverheadWarmup   5: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadWarmup   6: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadWarmup   7: 1 op, 84.00 ns, 84.0000 ns/op
+OverheadWarmup   8: 1 op, 0.00 ns, 0.0000 ns/op
+
+OverheadActual   1: 1 op, 84.00 ns, 84.0000 ns/op
+OverheadActual   2: 1 op, 84.00 ns, 84.0000 ns/op
+OverheadActual   3: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   4: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   5: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   6: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   7: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadActual   8: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   9: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  10: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  11: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  12: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  13: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual  14: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual  15: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  16: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  17: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  18: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  19: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  20: 1 op, 84.00 ns, 84.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 1018570417.00 ns, 1.0186 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 982592958.00 ns, 982.5930 ms/op
+WorkloadActual   2: 1 op, 965352041.00 ns, 965.3520 ms/op
+WorkloadActual   3: 1 op, 966589834.00 ns, 966.5898 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 982592916.00 ns, 982.5929 ms/op
+WorkloadResult   2: 1 op, 965351999.00 ns, 965.3520 ms/op
+WorkloadResult   3: 1 op, 966589792.00 ns, 966.5898 ms/op
+// GC:  0 0 0 19880 1
+// Threading:  1 0 1
+
+// AfterAll
+// Benchmark Process 83386 has exited with code 0.
+
+Mean = 971.512 ms, StdErr = 5.552 ms (0.57%), N = 3, StdDev = 9.617 ms
+Min = 965.352 ms, Q1 = 965.971 ms, Median = 966.590 ms, Q3 = 974.591 ms, Max = 982.593 ms
+IQR = 8.620 ms, LowerFence = 953.040 ms, UpperFence = 987.522 ms
+ConfidenceInterval = [796.068 ms; 1,146.955 ms] (CI 99.9%), Margin = 175.444 ms (18.06% of Mean)
+Skewness = 0.38, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 4 (33,3%) benchmark(s) to run. Estimated finish 2026-05-05 1:14 (0h 0m from now) **
+// **************************
+// Benchmark: AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=4]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AdPerformance.Benchmarks-Job-FEWCWF-1.dll --anonymousPipes 135 136 --benchmarkName "AdPerformance.Benchmarks.AggregationBenchmarks.Sequential(RowCount: 10000000, Workers: 4)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 8 in /Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 83083.00 ns, 83.0830 us/op
+WorkloadJitting  1: 1 op, 700459.00 ns, 700.4590 us/op
+
+OverheadWarmup   1: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadWarmup   2: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadWarmup   3: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadWarmup   4: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadWarmup   5: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadWarmup   6: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadWarmup   7: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadWarmup   8: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadWarmup   9: 1 op, 42.00 ns, 42.0000 ns/op
+
+OverheadActual   1: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   2: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual   3: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadActual   4: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   5: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   6: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   7: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual   8: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   9: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  10: 1 op, 84.00 ns, 84.0000 ns/op
+OverheadActual  11: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  12: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  13: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  14: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  15: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  16: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  17: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  18: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  19: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  20: 1 op, 0.00 ns, 0.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 1291.00 ns, 1.2910 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 625.00 ns, 625.0000 ns/op
+WorkloadActual   2: 1 op, 250.00 ns, 250.0000 ns/op
+WorkloadActual   3: 1 op, 208.00 ns, 208.0000 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 584.00 ns, 584.0000 ns/op
+WorkloadResult   2: 1 op, 209.00 ns, 209.0000 ns/op
+WorkloadResult   3: 1 op, 167.00 ns, 167.0000 ns/op
+// GC:  0 0 0 0 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 83424 has exited with code 0.
+
+Mean = 320.000 ns, StdErr = 132.556 ns (41.42%), N = 3, StdDev = 229.593 ns
+Min = 167.000 ns, Q1 = 188.000 ns, Median = 209.000 ns, Q3 = 396.500 ns, Max = 584.000 ns
+IQR = 208.500 ns, LowerFence = -124.750 ns, UpperFence = 709.250 ns
+ConfidenceInterval = [-3,868.633 ns; 4,508.633 ns] (CI 99.9%), Margin = 4,188.633 ns (1308.95% of Mean)
+Skewness = 0.37, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 3 (25,0%) benchmark(s) to run. Estimated finish 2026-05-05 1:14 (0h 0m from now) **
+// **************************
+// Benchmark: AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=4]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AdPerformance.Benchmarks-Job-FEWCWF-1.dll --anonymousPipes 135 136 --benchmarkName "AdPerformance.Benchmarks.AggregationBenchmarks.MemoryMapped(RowCount: 10000000, Workers: 4)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 9 in /Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 79916.00 ns, 79.9160 us/op
+WorkloadJitting  1: 1 op, 399651417.00 ns, 399.6514 ms/op
+
+OverheadWarmup   1: 1 op, 291.00 ns, 291.0000 ns/op
+OverheadWarmup   2: 1 op, 709.00 ns, 709.0000 ns/op
+OverheadWarmup   3: 1 op, 333.00 ns, 333.0000 ns/op
+OverheadWarmup   4: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadWarmup   5: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadWarmup   6: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadWarmup   7: 1 op, 84.00 ns, 84.0000 ns/op
+OverheadWarmup   8: 1 op, 42.00 ns, 42.0000 ns/op
+
+OverheadActual   1: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual   2: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   3: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual   4: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual   5: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadActual   6: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadActual   7: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   8: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   9: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  10: 1 op, 167.00 ns, 167.0000 ns/op
+OverheadActual  11: 1 op, 209.00 ns, 209.0000 ns/op
+OverheadActual  12: 1 op, 84.00 ns, 84.0000 ns/op
+OverheadActual  13: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadActual  14: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual  15: 1 op, 84.00 ns, 84.0000 ns/op
+OverheadActual  16: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  17: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual  18: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  19: 1 op, 84.00 ns, 84.0000 ns/op
+OverheadActual  20: 1 op, 83.00 ns, 83.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 254532834.00 ns, 254.5328 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 255473541.00 ns, 255.4735 ms/op
+WorkloadActual   2: 1 op, 268070334.00 ns, 268.0703 ms/op
+WorkloadActual   3: 1 op, 251317375.00 ns, 251.3174 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 255473458.00 ns, 255.4735 ms/op
+WorkloadResult   2: 1 op, 268070251.00 ns, 268.0703 ms/op
+WorkloadResult   3: 1 op, 251317292.00 ns, 251.3173 ms/op
+// GC:  0 0 0 61952 1
+// Threading:  4 0 1
+
+// AfterAll
+// Benchmark Process 83438 has exited with code 0.
+
+Mean = 258.287 ms, StdErr = 5.037 ms (1.95%), N = 3, StdDev = 8.724 ms
+Min = 251.317 ms, Q1 = 253.395 ms, Median = 255.473 ms, Q3 = 261.772 ms, Max = 268.070 ms
+IQR = 8.376 ms, LowerFence = 240.831 ms, UpperFence = 274.337 ms
+ConfidenceInterval = [99.135 ms; 417.439 ms] (CI 99.9%), Margin = 159.152 ms (61.62% of Mean)
+Skewness = 0.29, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 2 (16,7%) benchmark(s) to run. Estimated finish 2026-05-05 1:14 (0h 0m from now) **
+// **************************
+// Benchmark: AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=8]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AdPerformance.Benchmarks-Job-FEWCWF-1.dll --anonymousPipes 135 136 --benchmarkName "AdPerformance.Benchmarks.AggregationBenchmarks.Sequential(RowCount: 10000000, Workers: 8)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 10 in /Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 69875.00 ns, 69.8750 us/op
+WorkloadJitting  1: 1 op, 640209.00 ns, 640.2090 us/op
+
+OverheadWarmup   1: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadWarmup   2: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadWarmup   3: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadWarmup   4: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadWarmup   5: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadWarmup   6: 1 op, 42.00 ns, 42.0000 ns/op
+
+OverheadActual   1: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   2: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   3: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   4: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   5: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   6: 1 op, 84.00 ns, 84.0000 ns/op
+OverheadActual   7: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   8: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   9: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  10: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  11: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  12: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  13: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  14: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  15: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  16: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  17: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  18: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  19: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual  20: 1 op, 42.00 ns, 42.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 542.00 ns, 542.0000 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 459.00 ns, 459.0000 ns/op
+WorkloadActual   2: 1 op, 375.00 ns, 375.0000 ns/op
+WorkloadActual   3: 1 op, 250.00 ns, 250.0000 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 417.00 ns, 417.0000 ns/op
+WorkloadResult   2: 1 op, 333.00 ns, 333.0000 ns/op
+WorkloadResult   3: 1 op, 208.00 ns, 208.0000 ns/op
+// GC:  0 0 0 0 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 83490 has exited with code 0.
+
+Mean = 319.333 ns, StdErr = 60.719 ns (19.01%), N = 3, StdDev = 105.168 ns
+Min = 208.000 ns, Q1 = 270.500 ns, Median = 333.000 ns, Q3 = 375.000 ns, Max = 417.000 ns
+IQR = 104.500 ns, LowerFence = 113.750 ns, UpperFence = 531.750 ns
+ConfidenceInterval = [-1,599.325 ns; 2,237.991 ns] (CI 99.9%), Margin = 1,918.658 ns (600.83% of Mean)
+Skewness = -0.13, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 1 (8,3%) benchmark(s) to run. Estimated finish 2026-05-05 1:14 (0h 0m from now) **
+// **************************
+// Benchmark: AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=8]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AdPerformance.Benchmarks-Job-FEWCWF-1.dll --anonymousPipes 137 138 --benchmarkName "AdPerformance.Benchmarks.AggregationBenchmarks.MemoryMapped(RowCount: 10000000, Workers: 8)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 11 in /Volumes/Code/interview/fv-sec-001-software-engineer-challenge/benchmarks/AdPerformance.Benchmarks/bin/Release/net10.0/AdPerformance.Benchmarks-Job-FEWCWF-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 74000.00 ns, 74.0000 us/op
+WorkloadJitting  1: 1 op, 467249583.00 ns, 467.2496 ms/op
+
+OverheadWarmup   1: 1 op, 417.00 ns, 417.0000 ns/op
+OverheadWarmup   2: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadWarmup   3: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadWarmup   4: 1 op, 125.00 ns, 125.0000 ns/op
+OverheadWarmup   5: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadWarmup   6: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadWarmup   7: 1 op, 84.00 ns, 84.0000 ns/op
+
+OverheadActual   1: 1 op, 209.00 ns, 209.0000 ns/op
+OverheadActual   2: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   3: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   4: 1 op, 42.00 ns, 42.0000 ns/op
+OverheadActual   5: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual   6: 1 op, 84.00 ns, 84.0000 ns/op
+OverheadActual   7: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual   8: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual   9: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  10: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  11: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  12: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  13: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  14: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  15: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  16: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  17: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  18: 1 op, 83.00 ns, 83.0000 ns/op
+OverheadActual  19: 1 op, 41.00 ns, 41.0000 ns/op
+OverheadActual  20: 1 op, 0.00 ns, 0.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 199910583.00 ns, 199.9106 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 214658041.00 ns, 214.6580 ms/op
+WorkloadActual   2: 1 op, 209665750.00 ns, 209.6658 ms/op
+WorkloadActual   3: 1 op, 187145667.00 ns, 187.1457 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 214658000.00 ns, 214.6580 ms/op
+WorkloadResult   2: 1 op, 209665709.00 ns, 209.6657 ms/op
+WorkloadResult   3: 1 op, 187145626.00 ns, 187.1456 ms/op
+// GC:  0 0 0 118048 1
+// Threading:  8 0 1
+
+// AfterAll
+// Benchmark Process 83516 has exited with code 0.
+
+Mean = 203.823 ms, StdErr = 8.462 ms (4.15%), N = 3, StdDev = 14.657 ms
+Min = 187.146 ms, Q1 = 198.406 ms, Median = 209.666 ms, Q3 = 212.162 ms, Max = 214.658 ms
+IQR = 13.756 ms, LowerFence = 177.771 ms, UpperFence = 232.796 ms
+ConfidenceInterval = [-63.579 ms; 471.226 ms] (CI 99.9%), Margin = 267.403 ms (131.19% of Mean)
+Skewness = -0.34, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 0 (0,0%) benchmark(s) to run. Estimated finish 2026-05-05 1:14 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/AdPerformance.Benchmarks.AggregationBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts/results/AdPerformance.Benchmarks.AggregationBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts/results/AdPerformance.Benchmarks.AggregationBenchmarks-report.html
+
+// * Detailed results *
+AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=1]
+Runtime = .NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 328.004 ms, StdErr = 6.570 ms (2.00%), N = 3, StdDev = 11.380 ms
+Min = 319.419 ms, Q1 = 321.550 ms, Median = 323.680 ms, Q3 = 332.296 ms, Max = 340.912 ms
+IQR = 10.746 ms, LowerFence = 305.430 ms, UpperFence = 348.415 ms
+ConfidenceInterval = [120.393 ms; 535.615 ms] (CI 99.9%), Margin = 207.611 ms (63.30% of Mean)
+Skewness = 0.33, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[311.194 ms ; 331.906 ms) | @@
+[331.906 ms ; 351.268 ms) | @
+---------------------------------------------------
+
+AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=1]
+Runtime = .NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 168.167 ms, StdErr = 4.951 ms (2.94%), N = 3, StdDev = 8.576 ms
+Min = 163.135 ms, Q1 = 163.216 ms, Median = 163.298 ms, Q3 = 170.683 ms, Max = 178.069 ms
+IQR = 7.467 ms, LowerFence = 152.016 ms, UpperFence = 181.884 ms
+ConfidenceInterval = [11.717 ms; 324.617 ms] (CI 99.9%), Margin = 156.450 ms (93.03% of Mean)
+Skewness = 0.38, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[162.798 ms ; 178.406 ms) | @@@
+---------------------------------------------------
+
+AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=4]
+Runtime = .NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 223.000 ns, StdErr = 77.410 ns (34.71%), N = 3, StdDev = 134.078 ns
+Min = 126.000 ns, Q1 = 146.500 ns, Median = 167.000 ns, Q3 = 271.500 ns, Max = 376.000 ns
+IQR = 125.000 ns, LowerFence = -41.000 ns, UpperFence = 459.000 ns
+ConfidenceInterval = [-2,223.088 ns; 2,669.088 ns] (CI 99.9%), Margin = 2,446.088 ns (1096.90% of Mean)
+Skewness = 0.34, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[  3.984 ns ; 268.516 ns) | @@
+[268.516 ns ; 498.016 ns) | @
+---------------------------------------------------
+
+AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=4]
+Runtime = .NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 48.600 ms, StdErr = 3.891 ms (8.01%), N = 3, StdDev = 6.740 ms
+Min = 44.489 ms, Q1 = 44.711 ms, Median = 44.933 ms, Q3 = 50.656 ms, Max = 56.378 ms
+IQR = 5.945 ms, LowerFence = 35.794 ms, UpperFence = 59.573 ms
+ConfidenceInterval = [-74.357 ms; 171.556 ms] (CI 99.9%), Margin = 122.956 ms (253.00% of Mean)
+Skewness = 0.38, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[44.300 ms ; 56.567 ms) | @@@
+---------------------------------------------------
+
+AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=8]
+Runtime = .NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 318.667 ns, StdErr = 90.940 ns (28.54%), N = 3, StdDev = 157.513 ns
+Min = 208.000 ns, Q1 = 228.500 ns, Median = 249.000 ns, Q3 = 374.000 ns, Max = 499.000 ns
+IQR = 145.500 ns, LowerFence = 10.250 ns, UpperFence = 592.250 ns
+ConfidenceInterval = [-2,554.956 ns; 3,192.289 ns] (CI 99.9%), Margin = 2,873.623 ns (901.76% of Mean)
+Skewness = 0.36, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[ 64.657 ns ; 371.843 ns) | @@
+[371.843 ns ; 642.343 ns) | @
+---------------------------------------------------
+
+AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=1000000, Workers=8]
+Runtime = .NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 76.301 ms, StdErr = 3.877 ms (5.08%), N = 3, StdDev = 6.715 ms
+Min = 68.560 ms, Q1 = 74.178 ms, Median = 79.796 ms, Q3 = 80.172 ms, Max = 80.548 ms
+IQR = 5.994 ms, LowerFence = 65.186 ms, UpperFence = 89.163 ms
+ConfidenceInterval = [-46.202 ms; 198.805 ms] (CI 99.9%), Margin = 122.504 ms (160.55% of Mean)
+Skewness = -0.38, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[68.443 ms ; 80.665 ms) | @@@
+---------------------------------------------------
+
+AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=1]
+Runtime = .NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 3.237 s, StdErr = 0.013 s (0.41%), N = 3, StdDev = 0.023 s
+Min = 3.211 s, Q1 = 3.230 s, Median = 3.250 s, Q3 = 3.251 s, Max = 3.251 s
+IQR = 0.020 s, LowerFence = 3.200 s, UpperFence = 3.281 s
+ConfidenceInterval = [2.815 s; 3.660 s] (CI 99.9%), Margin = 0.422 s (13.04% of Mean)
+Skewness = -0.38, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[3.210 s ; 3.252 s) | @@@
+---------------------------------------------------
+
+AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=1]
+Runtime = .NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 971.512 ms, StdErr = 5.552 ms (0.57%), N = 3, StdDev = 9.617 ms
+Min = 965.352 ms, Q1 = 965.971 ms, Median = 966.590 ms, Q3 = 974.591 ms, Max = 982.593 ms
+IQR = 8.620 ms, LowerFence = 953.040 ms, UpperFence = 987.522 ms
+ConfidenceInterval = [796.068 ms; 1,146.955 ms] (CI 99.9%), Margin = 175.444 ms (18.06% of Mean)
+Skewness = 0.38, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[965.221 ms ; 982.724 ms) | @@@
+---------------------------------------------------
+
+AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=4]
+Runtime = .NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 320.000 ns, StdErr = 132.556 ns (41.42%), N = 3, StdDev = 229.593 ns
+Min = 167.000 ns, Q1 = 188.000 ns, Median = 209.000 ns, Q3 = 396.500 ns, Max = 584.000 ns
+IQR = 208.500 ns, LowerFence = -124.750 ns, UpperFence = 709.250 ns
+ConfidenceInterval = [-3,868.633 ns; 4,508.633 ns] (CI 99.9%), Margin = 4,188.633 ns (1308.95% of Mean)
+Skewness = 0.37, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[166.562 ns ; 584.438 ns) | @@@
+---------------------------------------------------
+
+AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=4]
+Runtime = .NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 258.287 ms, StdErr = 5.037 ms (1.95%), N = 3, StdDev = 8.724 ms
+Min = 251.317 ms, Q1 = 253.395 ms, Median = 255.473 ms, Q3 = 261.772 ms, Max = 268.070 ms
+IQR = 8.376 ms, LowerFence = 240.831 ms, UpperFence = 274.337 ms
+ConfidenceInterval = [99.135 ms; 417.439 ms] (CI 99.9%), Margin = 159.152 ms (61.62% of Mean)
+Skewness = 0.29, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[245.457 ms ; 261.334 ms) | @@
+[261.334 ms ; 276.009 ms) | @
+---------------------------------------------------
+
+AggregationBenchmarks.Sequential: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=8]
+Runtime = .NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 319.333 ns, StdErr = 60.719 ns (19.01%), N = 3, StdDev = 105.168 ns
+Min = 208.000 ns, Q1 = 270.500 ns, Median = 333.000 ns, Q3 = 375.000 ns, Max = 417.000 ns
+IQR = 104.500 ns, LowerFence = 113.750 ns, UpperFence = 531.750 ns
+ConfidenceInterval = [-1,599.325 ns; 2,237.991 ns] (CI 99.9%), Margin = 1,918.658 ns (600.83% of Mean)
+Skewness = -0.13, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[112.293 ns ; 279.293 ns) | @
+[279.293 ns ; 470.707 ns) | @@
+---------------------------------------------------
+
+AggregationBenchmarks.MemoryMapped: Job-FEWCWF(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [RowCount=10000000, Workers=8]
+Runtime = .NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 203.823 ms, StdErr = 8.462 ms (4.15%), N = 3, StdDev = 14.657 ms
+Min = 187.146 ms, Q1 = 198.406 ms, Median = 209.666 ms, Q3 = 212.162 ms, Max = 214.658 ms
+IQR = 13.756 ms, LowerFence = 177.771 ms, UpperFence = 232.796 ms
+ConfidenceInterval = [-63.579 ms; 471.226 ms] (CI 99.9%), Margin = 267.403 ms (131.19% of Mean)
+Skewness = -0.34, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[173.807 ms ; 198.823 ms) | @
+[198.823 ms ; 227.997 ms) | @@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.15.8, macOS Tahoe 26.4.1 (25E253) [Darwin 25.4.0]
+Apple M4, 1 CPU, 10 logical and 10 physical cores
+.NET SDK 10.0.100
+  [Host]     : .NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a
+  Job-FEWCWF : .NET 10.0.0 (10.0.0, 10.0.25.52411), Arm64 RyuJIT armv8.0-a
+
+InvocationCount=1  IterationCount=3  UnrollFactor=1  
+WarmupCount=1  
+
+| Method       | RowCount | Workers | Mean               | Error            | StdDev          | Median             | Ratio        | RatioSD    | Gen0        | Gen1      | Allocated    | Alloc Ratio |
+|------------- |--------- |-------- |-------------------:|-----------------:|----------------:|-------------------:|-------------:|-----------:|------------:|----------:|-------------:|------------:|
+| Sequential   | 1000000  | 1       |   328,003,819.0 ns | 207,611,003.0 ns | 11,379,859.7 ns |   323,680,208.0 ns |         1.00 |       0.04 |  35000.0000 |         - |  294884560 B |       1.000 |
+| MemoryMapped | 1000000  | 1       |   168,167,235.7 ns | 156,450,255.7 ns |  8,575,566.5 ns |   163,297,916.0 ns |         0.51 |       0.03 |           - |         - |      19880 B |       0.000 |
+|              |          |         |                    |                  |                 |                    |              |            |             |           |              |             |
+| Sequential   | 1000000  | 4       |           223.0 ns |       2,446.1 ns |        134.1 ns |           167.0 ns |         1.23 |       0.86 |           - |         - |            - |          NA |
+| MemoryMapped | 1000000  | 4       |    48,599,861.2 ns | 122,956,494.7 ns |  6,739,660.4 ns |    44,933,125.5 ns |   268,661.76 | 117,541.16 |           - |         - |      61952 B |          NA |
+|              |          |         |                    |                  |                 |                    |              |            |             |           |              |             |
+| Sequential   | 1000000  | 8       |           318.7 ns |       2,873.6 ns |        157.5 ns |           249.0 ns |         1.15 |       0.65 |           - |         - |            - |          NA |
+| MemoryMapped | 1000000  | 8       |    76,301,237.0 ns | 122,503,589.4 ns |  6,714,835.1 ns |    79,795,751.0 ns |   275,390.61 |  98,032.05 |           - |         - |     118048 B |          NA |
+|              |          |         |                    |                  |                 |                    |              |            |             |           |              |             |
+| Sequential   | 10000000 | 1       | 3,237,297,972.0 ns | 422,204,124.5 ns | 23,142,432.8 ns | 3,250,367,625.0 ns |         1.00 |       0.01 | 352000.0000 | 1000.0000 | 2946833240 B |       1.000 |
+| MemoryMapped | 10000000 | 1       |   971,511,569.0 ns | 175,443,745.4 ns |  9,616,663.7 ns |   966,589,792.0 ns |         0.30 |       0.00 |           - |         - |      19880 B |       0.000 |
+|              |          |         |                    |                  |                 |                    |              |            |             |           |              |             |
+| Sequential   | 10000000 | 4       |           320.0 ns |       4,188.6 ns |        229.6 ns |           209.0 ns |         1.33 |       1.09 |           - |         - |            - |          NA |
+| MemoryMapped | 10000000 | 4       |   258,287,000.3 ns | 159,152,221.6 ns |  8,723,670.3 ns |   255,473,458.0 ns | 1,074,907.99 | 494,382.75 |           - |         - |      61952 B |          NA |
+|              |          |         |                    |                  |                 |                    |              |            |             |           |              |             |
+| Sequential   | 10000000 | 8       |           319.3 ns |       1,918.7 ns |        105.2 ns |           333.0 ns |         1.09 |       0.47 |           - |         - |            - |          NA |
+| MemoryMapped | 10000000 | 8       |   203,823,111.7 ns | 267,402,591.9 ns | 14,657,238.4 ns |   209,665,709.0 ns |   693,594.89 | 225,830.83 |           - |         - |     118048 B |          NA |
+
+// * Warnings *
+MinIterationTime
+  AggregationBenchmarks.Sequential: InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1   -> The minimum observed iteration time is 167ns which is very small. It's recommended to increase it to at least 100ms using more operations.
+  AggregationBenchmarks.MemoryMapped: InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1 -> The minimum observed iteration time is 44.489ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  AggregationBenchmarks.Sequential: InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1   -> The minimum observed iteration time is 250ns which is very small. It's recommended to increase it to at least 100ms using more operations.
+  AggregationBenchmarks.MemoryMapped: InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1 -> The minimum observed iteration time is 68.56ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  AggregationBenchmarks.Sequential: InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1   -> The minimum observed iteration time is 208ns which is very small. It's recommended to increase it to at least 100ms using more operations.
+
+// * Legends *
+  RowCount    : Value of the 'RowCount' parameter
+  Workers     : Value of the 'Workers' parameter
+  Mean        : Arithmetic mean of all measurements
+  Error       : Half of 99.9% confidence interval
+  StdDev      : Standard deviation of all measurements
+  Median      : Value separating the higher half of all measurements (50th percentile)
+  Ratio       : Mean of the ratio distribution ([Current]/[Baseline])
+  RatioSD     : Standard deviation of the ratio distribution ([Current]/[Baseline])
+  Gen0        : GC Generation 0 collects per 1000 operations
+  Gen1        : GC Generation 1 collects per 1000 operations
+  Allocated   : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  Alloc Ratio : Allocated memory ratio distribution ([Current]/[Baseline])
+  1 ns        : 1 Nanosecond (0.000000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:51 (51.33 sec), executed benchmarks: 12
+
+Global total time: 00:00:58 (58.09 sec), executed benchmarks: 12
+// * Artifacts cleanup *
+Artifacts cleanup is finished
